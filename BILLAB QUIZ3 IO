@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Kullanıcı tarafından girilen karaktrin sesli harf olup olmadığını switch-case yapısı ile bulan programı yazın.
+İsterler:
+-Kullanıcı tarafından girilen karakterin öncelikle,rakam,harf ya da özel karakter (" ! # $ % & ' + - . / : ; < = > ? \) olup olmadığını
+if-else ile kontrol edilmelidir.
+-Harf olduğu tespit edilen karakterin, sesli harf olup olmadığını switch-case yapısı ile bulunuz.*/
+
+int main() {
+char karakter;
+printf("Bir karakter giriniz: ");
+scanf("%c",&karakter);
+if(karakter>='0' && karakter<='9') {
+    printf("Girdiginiz karakter rakamdir. \n");
+}
+else if(karakter>='"' && karakter<='*') {
+    printf("Girdiginiz karakter ozel karakter. \n");
+}
+else
+    switch(karakter) {
+
+  case 'A':
+  printf("Sesli harf \n");
+  break;
+
+  case 'a':
+  printf("Sesli harf \n");
+  break;
+
+  case 'E':
+  printf("Sesli harf \n");
+  break;
+
+  case 'e':
+  printf("Sesli harf \n");
+  break;
+
+  case 'U':
+  printf("Sesli harf \n");
+  break;
+
+  case 'u':
+  printf("Sesli harf \n");
+  break;
+
+  case 'O':
+  printf("Sesli harf \n");
+  break;
+
+  case 'o':
+  printf("Sesli harf \n");
+  break;
+
+  default:
+  printf("Sessiz harf girdiniz. ");
+  break;
+    }
+  }
