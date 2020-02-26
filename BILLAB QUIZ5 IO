@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+/* Kullanıcının klavyeden gireceği tam sayı tipinde, satır ve sütun sayısına göre,
+döngü kullanarak 1 ve 0 dan oluşan daire şeklini çizdiren programı C dilinde yazınız.*/
+
+
+    int main ()  {
+    int satir,sutun,i,j;
+    printf("Satir sayisini giriniz: ");
+    scanf("%d",&satir);
+    printf("Sutun sayisini giriniz: ");
+    scanf("%d",&sutun);
+    printf("\n");
+
+    for(i=1;i<=satir;i++){
+
+        for(j=1;j<=sutun;j++){
+
+            if(i==1||i==satir){
+
+                if(j==1||j==sutun)
+                    printf("0");
+                else
+                    printf("1");
+            }
+            else{
+                if(j==1||j==sutun)
+                    printf("1");
+                else
+                    printf("0");
+            }
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+
+}
