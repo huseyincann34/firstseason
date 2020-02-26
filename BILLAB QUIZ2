@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Kullanıcıdan alınan kilo ve boy değerlerine göre vücut kitle indeksini hesaplayan ve bu endeks değerine göre kişileri sınıflandırıp
+ağağıda belirten mesajları yazdıran programı C dilinde yazınız.
+
+    Vücut Kitle Endeksi: Kilo(kg)/Boy(m)^2
+
+ Vücut Kitle Endeksi;
+
+ 0-18.4 aralığında ise ekrana :İdeal kilonuzun altındasınız
+ 18.5-24.9 aralığında ise ekrana: Kilonuz tamamen normal
+ 25 ve üzerinde ise ekrana: İdeal kilonuzun üzerindesiniz   mesajları yazılacaktır */
+
+ int main() {
+ float kilo,boy,endeks;
+ printf("Kilo degerinizi giriniz(kg): ");
+ scanf("%f",&kilo);
+ printf("Boy degerini giriniz(m): ");
+ scanf("%f",&boy);
+ endeks=kilo/(boy*boy);
+ printf("Vucut kitle endeksiniz: %f\n",endeks);
+ if(0<endeks && endeks<18.4){
+    printf("Ideal kilonuzun altindasiniz");
+ }
+ else if(18.5<endeks && endeks<24.9){
+    printf("Kilonuz tamamen normal");
+ }
+else {
+    printf("Ideal kilonuzun uzerindesiniz");
+}
+
+ }
