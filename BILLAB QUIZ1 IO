@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Dairenin yaricapini kullanicidan isteyiniz. Dairenin alanini 
+ve cevresini karsilastiriniz*/
+int main()
+{
+    float r;
+    printf("Dairenin yaricapini giriniz: ");
+    scanf("%f", &r);
+    float area = 3.14*r*r;
+    float circumference = 2*3.14*r;
+    printf("Dairenin alani: %f \n", area);
+    printf("Dairenin cevresi: %f\n", circumference);
+
+    if(area > circumference)
+        printf("Dairenin alani cevresinden buyuktur.");
+    else if(area < circumference)
+        printf("Dairenin cevresi alanindan buyuktur.");
+    else
+        printf("Dairenin cevresi alanina esittir.");
+
+
+
+        return 0;
+
+}
