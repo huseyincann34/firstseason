@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Dışarıdan girilen kare kenar uzunluğuna göre, kare içerisine '*' karakterleri kullanarak X çizdirmek
+için gerekli kodu yazınız. */
+
+int main() {
+int kenar,i,j;
+printf("Karenin bir kenarini giriniz: ");
+scanf("%d",&kenar);
+for(i=1; i<=kenar; i++) {
+    for(j=1; j<=kenar; j++){
+        if(i==j || i+j==kenar+1){
+            printf("X");
+        }
+        else{
+            printf(" ");
+        }
+    }
+    printf("\n");
+   }
+}
