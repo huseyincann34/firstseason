@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Kullanıcıdan istenilen urunun fiyatina
+-0-100 aralığındaysa %10
+-100-500 aralığındaysa %15
+-500den fazlaysa %25
+oranında indirim uygulanacak ve yazıdırılacaktır*/
+
+int main () {
+  float fiyat;
+  printf("Lutfen urunun fiyatini girinz: ");
+  scanf("%f",&fiyat);
+  if(0<fiyat && fiyat<=100)
+    fiyat=fiyat-((fiyat*10)/100);
+  else if(100<fiyat && fiyat<=500)
+    fiyat=fiyat-((fiyat*15)/100);
+  else
+    fiyat=fiyat-((fiyat*25)/100);
+  printf("Urunun indirimli fiyati: %.2f",fiyat);
+  return 0;
+
+ }
