@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Basit hesap makinesi yapın(+ - * /)
+Bölme işleminde bölen kısmında 0 olup olmadığını
+if-else yapısıyla kontrol edin.
+İşlemleri yaparken switch-case yapısı kullanın*/
+
+int main()
+{
+    float x,y;
+    char op;
+    printf("--------HESAP MAKINESINE HOSGELDINIZ--------\n");
+    printf("Lutfen islem yapacaginiz operatoru seciniz: ");
+    scanf("%c",&op);
+    printf("x sayisini giriniz: ");
+    scanf("%f",&x);
+    printf("y sayisini giriniz: ");
+    scanf("%f",&y);
+    if(op=='/' && y==0)
+    {
+        printf("Bolme isleminde payda 0 ise sonuc tanimsizdir. ");
+    }
+    switch (op) {
+    case '+':
+        printf("%.2f + %.2f = Iki sayinin toplami %.2f",x,y,x+y);
+        break;
+    case '-':
+        printf("%.2f - %.2f = Iki sayinin farki %.2f",x,y,x-y);
+        break;
+    case '*':
+        printf("%.2f * %.2f = Iki sayinin carpimi %.2f",x,y,x*y);
+        break;
+    case '/':
+        printf("%.2f / %.2f = Iki sayinin bolumu %.2f",x,y,x/y);
+        break;
+    default:
+        printf("Yanlıs operator sectiniz");
+        break;
+
+    }
+   return 0;
+
+}
